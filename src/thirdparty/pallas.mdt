@@ -133,6 +133,8 @@
 
 在下一条消息中, 你会看到其他人刚刚发送的消息, 输入数据**示例**如下:
 
+Input format:
+
 ```
 [messageId][{date} from_guild:{channelId}] {senderName}<{senderId}> 说: {userContent}
 ```
@@ -231,6 +233,8 @@ userContent: String
 你需要生成一条消息, 这条消息添加在上面输入数组的最末尾, 读起来是合理的, 并且一切都符合聊天场景。
 
 在接下来的生成过程中, 你需要将你的输出建构为如下格式:
+
+Output format:
 ${outputSchema}
 
 我们继续。
@@ -275,9 +279,11 @@ ${outputSchema}
 
 10. 如果必要，把你要运行的指令加入到 `functions` 列表里。
 
-${functionPrompt}
-
 11. 记住JSON/XML的结果。
+
+${coreMemory}
+
+${functionPrompt}
 
 === 输出 ===
 
